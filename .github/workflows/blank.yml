@@ -5,11 +5,6 @@ name: CI
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -33,6 +28,7 @@ jobs:
       - name: Create commit comment
         uses: peter-evans/commit-comment@v2.0.1
         with:
+          path: README.md
           body: |
             This is a multi-line test comment
             - With GitHub **Markdown** :sparkles:
