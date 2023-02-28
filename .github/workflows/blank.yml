@@ -33,7 +33,6 @@ jobs:
       - name: Create commit comment
         uses: peter-evans/commit-comment@v2.0.1
         with:
-          path: README.md
           body: |
             This is a multi-line test comment
             - With GitHub **Markdown** :sparkles:
